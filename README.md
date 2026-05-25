@@ -47,16 +47,3 @@ print(response)
 agent.close()
 ```
 
-## LongMemEvo Evaluation
-
-```bash
-python examples/evaluate_longmemevo.py \
-  --dataset-path /path/to/longmemeval_s_cleaned_fixed.json \
-  --agent-backend remote \
-  --agent-model gpt-5.4 \
-  --max-samples 100 \
-  --output results/longmemevo_eval.json
-```
-
-For local vLLM inference, set `VLLM_BASE_URL` and `VLLM_MODEL_NAME`, then use
-`--agent-backend local`.
