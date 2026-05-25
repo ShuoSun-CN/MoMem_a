@@ -1,0 +1,13 @@
+mem0ai
+openai
+requests
+transformers
+qdrant-client
+ollama
+tqdm
+
+# Optional: required only for online GRPO / LoRA updating.
+torch
+datasets
+peft
+trl
