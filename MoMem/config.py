@@ -7,7 +7,7 @@ DEFAULT_EXPLICIT_MEMORY_MEM0_CONFIG = {
         "llm": {
             "provider": "openai",
             "config": {
-                "model": os.getenv("OPENAI_MODEL", "gpt-5.4"),
+                "model": "gpt-5.4",
                 "temperature": 0.2,
                 "max_tokens": 2000,
                 "top_p": 1.0

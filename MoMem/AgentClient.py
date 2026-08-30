@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.4")
+OPENAI_MODEL = "gpt-5.4"
 
 LOCAL_BASE_URL = os.getenv("VLLM_BASE_URL", "http://127.0.0.1:8090")
 LOCAL_MODEL = os.getenv("VLLM_MODEL_NAME", "Qwen/Qwen2.5-7B-Instruct")
@@ -56,7 +56,7 @@ class AgentClient:
             raise ValueError("OpenAI backend requires OPENAI_API_KEY or api_key.")
 
         self.base_url = (base_url or OPENAI_BASE_URL).rstrip("/")
-        self.model_name = model_name or OPENAI_MODEL
+        self.model_name = OPENAI_MODEL
         self.tokenizer = None
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 

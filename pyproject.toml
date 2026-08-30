@@ -9,4 +9,4 @@ description = "MoMem memory framework for explicit text records and reusable han
 requires-python = ">=3.10"
 
 [tool.setuptools.packages.find]
-include = ["MoMem*"]
+include = ["MoMem*", "examples*"]
